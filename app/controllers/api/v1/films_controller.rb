@@ -28,4 +28,5 @@ class Api::V1::FilmsController < Api::V1::BaseController
     end 
 end
 
+# The respond_with method is part of the responders gem and will return a JSON object with the results of each action in the controller.
 # Read more at https://www.pluralsight.com/guides/ruby-ruby-on-rails/building-a-crud-interface-with-react-and-ruby-on-rails#TVkVsTKbla0ZQCM4.99
