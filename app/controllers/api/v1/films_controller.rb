@@ -1,10 +1,10 @@
 class Api::V1::FilmsController < Api::V1::BaseController 
     def index 
-        respond_with Film.all 
+        respond_with Film.all.order("title") 
     end 
 
     def show 
-        respond_with Film.find(params[:film_id]) 
+        respond_with Film.find(params[:id]) 
     end
     
     def create 
@@ -12,11 +12,11 @@ class Api::V1::FilmsController < Api::V1::BaseController
     end 
     
     def destroy 
-        respond_with Film.destroy(params[:film_id]) 
+        respond_with Film.destroy(params[:id]) 
     end 
     
     def update 
-        film = Film.find(params["film_id"]) 
+        film = Film.find(params["id"]) 
         film.update_attributes(film_params) 
         respond_with film, json: film 
     end 
