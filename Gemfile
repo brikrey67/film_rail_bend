@@ -53,4 +53,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# gem will let the app apply respond_to rulke to all controller actions; add here and run bundle.
 gem 'responders'
